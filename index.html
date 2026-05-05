@@ -1,36 +1,28 @@
+
+    
+<!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>login/signup</title>
+        
+    </head>
+
+    <body>
+        <h2>ACCOMODATION MANAGEMENT SYSTEM</h2>
+        <form align="center" method="post" action="verifyUser.php" style="width: 50%; margin-top: 110px;" >
+            <div class="logo">
+                <img src="css/download22.png" alt="logo">
+             </div>
+            <h1>Login Credentials</h1>
+
+            <input type="text" name="username" placeholder="Username or registration number" required>
+            <input type="password" name="userPassword" placeholder="Password" required>
+            <a href="password_recovery.html">Forgot password?</a><br>
+            <input type="submit" value="Login" name="submit">
+            <div class="error" id="error"></div>
+        </form>
+        <script src="javascript/script.js"></script>
+    </body>
     
-    
-             <script>
-            // Get form and inputs
-const form = document.querySelector("form");
-const username = document.querySelector("input[name='username']");
-const password = document.querySelector("input[name='userPassword']");
-const errorDiv = document.getElementById("error");
-
-// Listen for form submission
-form.addEventListener("submit", function (e) {
-    let messages = [];
-
-    // Username validation
-    if (username.value.trim() === "") {
-        messages.push("Username is required");
-    } else if (username.value.length < 8) {
-        messages.push("Username must be at least 8 characters");
-    }
-
-    // Password validation
-    if (password.value.trim() === "") {
-        messages.push("Password is required");
-    } else if (password.value.length < 6) {
-        messages.push("Password must be at least 6 characters");
-    }
-
-    // If there are errors, prevent form submission
-    if (messages.length > 0) {
-        e.preventDefault(); // stop form from submitting
-        errorDiv.innerHTML = messages.join("<br>");
-    }
-});
-        </script>
 </html>
