@@ -16,7 +16,11 @@ body {
     align-items: center;
 
     position: relative;
+<<<<<<< HEAD
     overflow:scroll; 
+=======
+    overflow: hidden; 
+>>>>>>> c9ce3591d997ef8eec21c66ef9c048ca206180ed
 }
 
 /* Main heading */
