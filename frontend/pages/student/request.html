@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Send Accommodation Request</title>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: burlywood;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ffd60a;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #0d6efd;
+}
+
+.buttons button {
+    width: 48%;
+    padding: 14px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    /* Depth */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Hover effect (lift + glow) */
+.buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+/* Click effect */
+.buttons button:active {
+    transform: scale(0.96);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* Shine animation */
+.buttons button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.buttons button:hover::after {
+    left: 125%;
+}
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- LEFT SIDE (branding / info) -->
+    <div class="left-panel">
+        <h1><i class="fa-solid fa-hospital-user"></i></h1>
+        <h2>Accommodation Request</h2>
+        <p style="color: white;">
+            Submit your disability information for special room allocation.
+            Our admin team will review your request.
+        </p>
+    </div>
+
+    <!-- RIGHT SIDE (form) -->
+    <div class="right-panel">
+        <form action="submit_request.php" method="POST">
+
+            <h2>Fill in your details</h2>
+
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="name" placeholder="Student Name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-id-card"></i>
+                <input type="text" name="student_id" placeholder="Student ID" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-wheelchair"></i>
+                <input type="text" name="disability" placeholder="Type of Disability" required>
+            </div>
+
+            <div class="input-group textarea">
+                <i class="fa fa-note-sticky"></i>
+                <textarea name="notes" placeholder="Additional Notes..."></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
