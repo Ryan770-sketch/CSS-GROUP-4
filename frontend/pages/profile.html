@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Hostel System</title>
+    <link rel="stylesheet" href="profile.css">
+    </head> 
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="avatar"></div>
+            <h2 id = "display-name">Loading...</h2>
+            <span id = "user-role-badge" class="badge">Role</span>
+        </div>
+        <div class="info-grid">
+            <div class="info-group">
+                <label>Gender/Sex</label>
+                <p id ="info-sex">-----</p>     
+            </div>
+            <div class="info-group">
+                <label>Phone Number</label>
+                <p id = "info-phone">-----</p>
+            </div>
+
+            <hr>
+
+            <section class ="password-section">
+                <h3>Change Password</h3>
+                <p class = "security-note">Ensure your password is at least 8 characters long and includes a mix of letters and numbers.</p>
+
+                <form id="password-form">
+                    <div class="input-group">
+                        <label>Current Password</label>
+                        <input type="password" id="current-password" placeholder="Enter current password" required>
+                    </div><br>
+                    <div class="input-group">
+                        <label>New Password</label>
+                        <input type="password" id="new-password" placeholder="Enter new password" required>
+                    </div><br>
+                    <div class="input-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm new password" required>
+                    </div><br>
+                    <button type="submit" class="save-btn">Update Password</button>
+                </form>
+            </section>
+
+            <a href="dashboard.html"  class="back-link">Back to Dashboard</a>
+        </div>
+
+        <script src="profile.js"></script>
+    </div>
+</body>
+</html>
