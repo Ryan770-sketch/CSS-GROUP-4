@@ -1,8 +1,8 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "disability_requests");
 
-$sql = "SELECT * FROM requests ORDER BY created_at DESC";
-$result = $conn->query($sql);
+$select_requests = "SELECT * FROM requests ORDER BY created_at DESC";
+$result = $conn->query($select_requests);
 
 while($row = $result->fetch_assoc()) {
     echo "<div class='notification'>";
@@ -12,6 +12,4 @@ while($row = $result->fetch_assoc()) {
     echo "<hr>";
     echo "</div>";
 }
-
-$conn->close();
 ?>

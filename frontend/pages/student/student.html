@@ -1,7 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+
+
+
+*{
+    background-color: #f2f4f6;
+    box-sizing: border-box;
+    margin: 0;
+    max-height: 100vh;
+    font-family: sans-serif;
+}
+
+p{
+    width: 400px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    width: 100vw;
+    padding: 34px;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content:right;
+    gap: 14px;
+    align-items: center;
+
+}
+
+a{
+    text-decoration: none;
+    top: 50px;
+    right:12px;
+    color:#fff;
+    background: #23fa;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+
+}
+button{
+    border: none;
+    background-color:  rgb(20, 20, 20);
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-left: 40vw;
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+    animation: 0.3s ease;
+    cursor: pointer;
+}
+.status{
     
+    margin-left: 40px;
+    width: 30vw;
+    height: 40vh;
+    background-color: #f8d50b;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+i{
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color:rgb(8, 8, 8) ;
+    transform: scale(1.1);
+    
+}
+
+
+
+    </style>
     <title>Student's Dashboard</title>
     <link rel="stylesheet" href="../css/student.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,15 +92,33 @@
 <body>
     <p>STUDENT DASHBORD</p>
     <nav>
-        <a href="../../index.html">
-            <i class="fa fa-arrow-right-from-bracket"></i>       
-         </a>
-         <a href="" style="
-         background-color: #f2f4f6;
-         ">
-            <i class="fa fa-user" style="color: #4b4a4a;background-color: rgb(218, 216, 216); padding: 14px; border-radius: 50%; font-size: 24px;"></i>
-         </a>
-    </nav>
+    
+
+    <!-- NEW SEND REQUEST ICON -->
+    <a href="request.html" title="Send Request">
+        <i class="fa fa-paper-plane" style="
+            color: white;
+            background-color: #28a745;
+            padding: 14px;
+            border-radius: 50%;
+            font-size: 20px;
+        "></i>
+    </a>
+    
+<a href="../../index.html">
+        <i class="fa fa-arrow-right-from-bracket"></i>       
+    </a>
+
+    <a href="" style="background-color: #f2f4f6;">
+        <i class="fa fa-user" style="
+            color: #4b4a4a;
+            background-color: rgb(218, 216, 216);
+            padding: 14px;
+            border-radius: 50%;
+            font-size: 24px;
+        "></i>
+    </a>
+</nav>
      
                 <i class="fa-solid fa-circle-info" style="margin-left: 40px;"></i> Accommodation Status  <b style="margin-left: 300px;">NOTE</b><br><br>
                
